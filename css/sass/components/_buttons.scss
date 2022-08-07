@@ -1,0 +1,17 @@
+
+
+.btn {
+    all: unset;
+    padding: 15px 40px;
+    border-radius: 10px;
+    background-color: $activeColor;
+    color: $secondBgColor;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: opacity 200ms ease-in-out;
+
+    &:hover {
+        opacity: .8;
+    }
+}

@@ -1,5 +1,4 @@
 
-
 *{
     padding: 0;margin: 0;
     box-sizing: border-box;
@@ -7,7 +6,11 @@
 
 body {
     position: relative;
-    font-family: $main-font;
+    font-family: $main-font1;
+    font-family: $main-font2;
+    font-family: $main-font3;
+    background-color: $bodyBgColor;
+    overflow-x: hidden;
 }
 
 html {
@@ -15,8 +18,8 @@ html {
 }
 
 html::selection {
-    color: $darkColor ;
-    background : $mainColor ;
+    color: $secondBgColor ;
+    background : $mainTextColor ;
 }
 
 ul {
@@ -25,6 +28,13 @@ ul {
 }
 
 a {
-    @include reSetting-a(16px,black);
+    @include reSetting-a(16px,$mainHeaderColor);
 }
+
+p{ 
+    font-size: 14px;
+    color: $textSiblingColor;
+    text-transform: capitalize;
+}
+
 

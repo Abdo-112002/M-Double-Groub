@@ -1,1 +1,35 @@
 
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    // padding: 10px 0px;
+    &__logo {
+        width: 120px;
+        cursor: pointer;
+        img {
+            width: 100%;
+            object-fit: cover;
+            -webkit-user-drag: none;
+        }
+    }
+
+    &__navLinks {
+        @extend .row;
+        column-gap: 30px;
+
+        &--item {
+            font-size: 18px;
+            color: $mainHeaderColor;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 200ms ease-in-out;
+            &:hover {
+                color: $activeColor;
+            }
+        }
+    }
+}
