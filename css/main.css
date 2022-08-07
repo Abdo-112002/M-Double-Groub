@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html::-moz-selection {
+  color: #131921;
+  background: #A5D032;
+}
+
+html::selection {
+  color: #131921;
+  background: #A5D032;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: black;
+}
+
+.row, .header__top-wrapper__right, .header__top-wrapper__right--language {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+
+.container {
+  display: block;
+  width: 85%;
+  margin: auto;
+}
+
+.header__top-wrapper {
+  font-size: 0.9375rem;
+  background-color: aliceblue;
+  padding: 0.5rem 0px;
+}
+
+.header__top-wrapper__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+}
+
+.header__top-wrapper__email {
+  position: relative;
+}
+
+.header__top-wrapper--email {
+  margin-left: 0.625rem;
+}
+
+.header__top-wrapper--email::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: -27px;
+  width: 1px;
+  height: 20px;
+  background-color: #000;
+  opacity: .2;
+}
+
+.header__top-wrapper__right {
+  gap: 0px;
+}
+
+.header__top-wrapper__right > div {
+  border-right: 2px solid #C0C6CC;
+}
+
+.header__top-wrapper__right > div:last-child {
+  border-right: none;
+}
+
+.header__top-wrapper__right--social-icon {
+  padding: 0px 15px;
+}
+
+.header__top-wrapper__right--social-icon i {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.header__top-wrapper__right--language {
+  text-transform: capitalize;
+  padding: 0px 15px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.header__top-wrapper__right--language img {
+  width: 25px;
+}
+
+.header__top-wrapper__right--login {
+  padding: 0px 15px;
+}
+
+.header__top-wrapper__right--login i {
+  margin-right: 8px;
+}
+/*# sourceMappingURL=main.css.map */
