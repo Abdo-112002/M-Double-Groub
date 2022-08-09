@@ -13,7 +13,14 @@
 
 // import components fils
 @import 
+    './sass/components/title',
+    './sass/components/animations',
     './sass/components/buttons';
+
+
+// import pages fils
+@import 
+    './sass/pages/home';
 
 
 // import layout fils
@@ -21,6 +28,4 @@
     './sass/layout/header';
 
     
-// import pages fils
-@import 
-    './sass/pages/home';
+

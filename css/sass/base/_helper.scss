@@ -24,21 +24,42 @@
 }
 
 
+.sec-padding {
+    padding: 80px 0px;
+}
+
 .container {
     display: block;
-    width: 80%;
+    width: 85%;
     height: 100%;
     margin: auto;
+
+    @include devices(mobile) {
+        width: 90%;
+    }
 }
 
 .box {
     width: calc((100% / 2) - 20px);
-    // outline: 1px solid red;
+    // border: 1px solid hotpink;
+    @include devices(mobile) {
+        width: calc((100% / 1) - 0px);
+    }
 }
 
 .active {
     color: $activeColor !important;
     font-weight: bold;
+    position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -10px;
+                height: 0.75rem;
+                @include bg-img('../../../img/svg/line-1.svg');
+            }
 }
 
 

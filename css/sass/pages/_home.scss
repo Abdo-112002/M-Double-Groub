@@ -2,10 +2,24 @@
 
 .mainSection {
     width: 100%;
-    height: 100vh;
+    height: 800px;
     position: relative;
     z-index: 1;
     @include bg-img('../../../img/bg-img/main-bg.jpg');
+
+    // media query
+    @include devices(tablet) {
+        height: 600px;
+    }
+
+    @include devices(mobile) {
+        height: 100vh;
+        .row {
+            align-items: flex-start;
+        }
+
+
+    }
     &::after {
         content: '';
         width: 100%;
@@ -20,29 +34,212 @@
     }
     &__info {
         padding-left: 20px;
+        @include devices(mobile) {
+            margin-top: 100px;
+            text-align: center;
+        }
         &--title {
             font-size: 45px;
+            font-weight: bold;
             color: $mainHeaderColor;
+            @include devices(tablet) {
+                font-size: 22px;
+            }
+            @include devices(mobile) {
+                font-size: 35px;
+            }
         }
         &--desc {
             margin: 25px 0px;
             padding-left: 100px;
             font-size: 20px;
-        }
-        .btn {
-            i {
+
+            @include devices(tablet) {
+                font-size: 15px;
+                padding: 0;
+            }
+            @include devices(mobile) {
                 font-size: 20px;
-                transform: translateY(5px);
+            }
+        }
+        
+    }
+
+    &__img {
+        @include prefixes(animation,infinity-y-img 2s ease-in-out  infinite ,$prefixes-list);
+        @include loping_y(infinity-y-img);
+        img {
+            display: block;
+            max-width: 80%;
+            margin-right: auto;
+
+            @include devices(tablet) {
+                margin: auto ;
+            }
+        }
+    }
+}
+
+.about {
+    &__services {
+        @extend .row;
+        gap: 20px;
+        justify-content: space-between;
+        &--item {
+            width: calc((100% / 2) - 10px);
+            background-color: $bgColor;
+            border-radius: 10px;
+            padding: 30px;
+            transform: skewY(-5deg);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0rem .5rem 1rem rgba(0,0,0,0.2);
+            @include devices(tablet) {
+                width: calc((100% / 1) - 0px);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 100%;
+                width: 100%;
+                height: 100%;
+                background-color: $mainTextColor;
+                z-index: -2;
+                transition: left 300ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            }
+
+            &:first-child::after {
+                left: 0;
+            }
+            &:hover::after {
+                left: 0;
+            }
+
+            &>div {
+                width: 100px;
+                height: 100px;
+                margin: auto;
+                border-radius: 43% 57% 14% 86% / 85% 81% 19% 15%  ;
+                background-color: $secondBgColor;
+                position: relative;
+                @extend .row;
+                justify-content: center;
+                align-items: center;
+                &::before {
+                    content: '';
+                    position:absolute;
+                    top: 0;
+                    left: 0;
+                    width: 105%;
+                    height: 105%;
+                    background-color: $secondBgColor;
+                    border-radius:19% 81% 67% 33% / 49% 41% 59% 51% ;
+                    z-index: -1;
+                    opacity: .4;
+                }
+                img {
+                    width: 50px;
+                }
+            }
+
+            h2 {
+                margin-top: 10px;
+                font-size: 20px;
+                color: $mainHeaderColor;
+            }
+        }
+    }
+
+
+    &__info {
+        &--desc {
+            font-size: 18px;
+            margin: 20px 0px;
+        }
+    }
+}
+
+
+.services {
+
+    &__information {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            right: -50%;
+            width: 500px;
+            height: 500px;
+            background-color: $mainTextColor;
+            border-radius: 79% 21% 80% 9% / 25% 62% 38% 75% ;
+            z-index: -1;
+            opacity: .4;
+            @include prefixes(animation,border-rotate 5s ease-in-out infinite ,$prefixes-list);
+            @include border-rotate(border-rotate);
+
+        }
+        &--accordion {
+            margin-top: 20px;
+
+            &__item {
+                /* From https://css.glass */
+                background: rgba(247, 247, 255, 0.35);
+                border-radius: 10px;
+                backdrop-filter: blur(5.5px);
+                -webkit-backdrop-filter: blur(5.5px);
+                margin-bottom: 15px;
+                // &:last-child {
+                //     margin-bottom: 0px;
+                // }
+                &--title {
+                    @extend .row;
+                    flex-wrap: nowrap;
+                    cursor: pointer;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 20px;
+                    user-select: none;
+                    h2 {
+                        color: $mainHeaderColor;
+                        max-width: 95%;
+                    }
+
+                    i {
+                        background-color: $bgColor;
+                        padding: 5px;
+                        font-size: 20px;
+                        font-weight: bold;
+                        border-radius: 50px;
+                        color: $activeColor;
+                    }
+                }
+
+                &--body {
+                    height: 0;
+                    overflow: hidden;
+                    transition: .3s linear;
+                    padding: 0 30px;
+                    &.actives {
+                        height: fit-content;
+                        padding-bottom: 15px;
+                    }
+                    p {
+                        font-size: 18px;
+                        word-spacing: 1.5px;
+                    }
+                }
             }
         }
     }
 
     &__img {
-        // border: 1px solid red;
+        @include prefixes(animation,infinity-y-img 2s ease-in-out  infinite ,$prefixes-list);
+        @include loping_y(infinity-y-img);
         img {
-            display: block;
-            width: 80%;
-            margin-right: auto;
+            width: 100%;
         }
     }
 }

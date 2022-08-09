@@ -1,0 +1,40 @@
+
+
+@mixin loping_y($animation-name) {
+    @include keyAnimation($animation-name){
+        50% {
+            transform: translateY(0px);
+        }
+        0% , 100% {
+            transform: translateY(15px);
+        }
+    };
+};
+
+@mixin loping_x($animation-name) {
+    @include keyAnimation($animation-name){
+        50% {
+            transform: translateX(0px)  translateY(5px);
+        }
+        0% , 100% {
+            transform: translateX(-15px) translateY(5px);
+        }
+    };
+};
+
+@mixin border-rotate($animation-name) {
+    @include keyAnimation($animation-name){
+        0%{
+            border-radius: 79% 21% 80% 9% / 25% 62% 38% 75% ;
+        }
+        40%{
+            border-radius: 25% 75% 25% 75% / 75% 25% 75% 25%;
+        }
+        70%{
+            border-radius:81% 19% 86% 14% / 19% 85% 15% 81%;
+        }
+        100%{
+            border-radius: 79% 21% 80% 9% / 25% 62% 38% 75% ;
+        }
+    };
+};
