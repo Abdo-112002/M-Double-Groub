@@ -1,5 +1,6 @@
 
 
+// main section
 .mainSection {
     width: 100%;
     height: 800px;
@@ -80,6 +81,8 @@
     }
 }
 
+
+// about us section
 .about {
     &__services {
         @extend .row;
@@ -154,6 +157,7 @@
 
 
     &__info {
+        margin-top: 20px;
         &--desc {
             font-size: 18px;
             margin: 20px 0px;
@@ -161,9 +165,9 @@
     }
 }
 
-
+// services section
 .services {
-
+    padding-top: 0px;
     &__information {
         position: relative;
         &::before {
@@ -171,16 +175,9 @@
             position: absolute;
             top: 20%;
             right: -50%;
-            width: 500px;
-            height: 500px;
-            background-color: $mainTextColor;
-            border-radius: 79% 21% 80% 9% / 25% 62% 38% 75% ;
             z-index: -1;
-            opacity: .4;
-            @include prefixes(animation,border-rotate 5s ease-in-out infinite ,$prefixes-list);
-            @include border-rotate(border-rotate);
-
         }
+
         &--accordion {
             margin-top: 20px;
 
@@ -188,8 +185,8 @@
                 /* From https://css.glass */
                 background: rgba(247, 247, 255, 0.35);
                 border-radius: 10px;
-                backdrop-filter: blur(5.5px);
-                -webkit-backdrop-filter: blur(5.5px);
+                backdrop-filter: blur(6px);
+                -webkit-backdrop-filter: blur(6px);
                 margin-bottom: 15px;
                 // &:last-child {
                 //     margin-bottom: 0px;
@@ -242,4 +239,175 @@
             width: 100%;
         }
     }
+}
+
+// testimonial section
+.testimonial {
+    
+    &__img {
+        position: relative;
+        display: inline-block;
+
+            img {
+                border-style: none;
+                height: auto;
+                max-width: 100%;
+                display: block;
+                vertical-align: baseline ;
+                position: relative;
+                margin: auto;
+            }
+
+            ul {
+                position: absolute;
+                width: 100%;
+                li {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 30px;
+                    overflow: hidden;
+                    position: absolute;
+                    box-shadow: 0px 0px 40px $secondBgColor;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    &:first-child {
+                        top: -355px;
+                        left: 30px;
+                    }
+                    &:nth-child(2) {
+                        top: -450px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    &:nth-child(3) {
+                        top: -355px;
+                        right:  20px;
+                    }
+
+                    &:nth-child(4) {
+                        right: 25px;
+                        bottom: 105px;
+                    }
+
+                    &:nth-child(5) {
+                        bottom: 7px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+
+                    &:nth-child(6) {
+                        left: 30px;
+                        bottom: 105px;
+                    }
+
+                    @include devices(mobile) {
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 22.5px;
+
+                        &:first-child {
+                            top: -273px;
+                            left: 26px;
+                        }
+                        &:nth-child(2) {
+                            top: -300px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                        &:nth-child(3) {
+                            top: -266px;
+                            right:  20px;
+                        }
+    
+                        &:nth-child(4) {
+                            right: 19px;
+                            bottom: 83px;
+                        }
+    
+                        &:nth-child(5) {
+                            bottom: 7px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+    
+                        &:nth-child(6) {
+                            left: 25px;
+                            bottom: 79px;
+                        }
+                    }
+                }
+            }
+    }
+
+
+    &__client {
+        .swiper {
+            width: 100%;
+            height: fit-content;
+            margin-top: 20px;
+            padding-bottom: 50px;
+            .swiper-slide {
+                padding: 25px;
+                .item {
+                    width: 100%;
+                    height: 100%;
+                    background-color : $activeColor;
+                    border-radius: 30px 0 30px 30px;
+                    padding: 50px 30px 30px;
+                    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+                    user-select: none;
+                    
+                    p{
+                        color: $bgColor;
+                        margin-bottom: 20px;
+                    }
+
+                    .row {
+                        .bx {
+                            font-size: 100px;
+                            color: #F9C9AD;
+                            opacity: .5;
+                        }
+
+                        .item-info {
+                            color: $bgColor;
+                            opacity: .7;
+                        }
+                    }
+
+                }
+            }
+
+
+            .btn-control {
+                width: 40px;
+                height: 40px;
+                background-color: #F9C9AD;
+                color: $activeColor;
+                padding: 10px;
+                border-radius: 10px;
+                z-index: 999;
+                &::after {
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+            }
+            &-button-next{
+                top: 90%;
+                left: 40px;
+            }
+
+            &-button-prev{
+                top: 90%;
+                right: auto;
+                left: 90px;
+            }
+
+          }
+    
+    }
+
 }

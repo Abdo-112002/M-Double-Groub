@@ -19,6 +19,11 @@
           <meta name="og:image" property="og:image" content="https://i.im.ge/2022/08/07/FRJ8jW.logooo-1.png" />
           
           <!-- custom css file -->
+          <!-- Link Swiper's CSS -->
+           <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+           />
           <link rel="stylesheet" href="css/aos.css">
           <link rel="shortcut icon" type="image/x-icon" href="img/logo/logo(1).png" />
           <!-- box icons  -->
@@ -26,7 +31,6 @@
           href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
           <!-- the own style -->
           <link rel="stylesheet" href="css/main.css">
-
 
     </head>
     <body dir="rtl" lang="ar">
@@ -89,7 +93,8 @@
         </main><!--./mainSection  -->
         
 
-        <section class="about sec-padding">
+        <section class="about sec-padding " data-aos="fade-up"
+        data-aos-duration="2000">
              <div class="container">
                 <div class="row justify-content-between align-items-center">
                     <div class="box">
@@ -143,7 +148,8 @@
 
 
 
-        <section class="services sec-padding">
+        <section class="services sec-padding" data-aos="fade-up"
+        data-aos-duration="2000">
             <div class="container">
                 <div class="row justify-content-between align-items-center">
                     <div class="box">
@@ -215,11 +221,112 @@
         </section><!-- ./services -->
 
 
+        <section class="banner sec-padding ">
+            <div class="container">
+                <img src="" alt="">
+                <div class="row justify-content-center align-items-center">
 
+                    <div class="banner__content">
+                        <h2>
+                            هل لديك فكرة مشروع في الاعتبار
+                        </h2>
+                        <p>
+                            نحن هنا لمساعدتكم وتقديم الإجابات على
+                            كل التساؤلات الخاصة بكم 
+                        </p>
+                        <button class="btn">
+                            اتصل بنا
+                            <i class='bx bx-left-arrow-alt'></i>
+                        </button>
+                    </div><!-- ./banner__content -->
+
+                </div><!-- ./row -->
+            </div><!-- ./container -->
+        </section><!-- .banner -->
+
+
+        <section class="testimonial sec-padding" data-aos="fade-up"
+        data-aos-duration="2000">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="box">
+                        <div class="testimonial__img">
+                            <img src="img/bg-img/testimonial.png" alt="testimonial img">
+                            <ul>
+                                <li><img src="img/servcis-icon/client.jpg" alt="client img"></li>
+                                <li><img src="img/servcis-icon/client.jpg" alt="client img"></li>
+                                <li><img src="img/servcis-icon/client.jpg" alt="client img"></li>
+                                <li><img src="img/servcis-icon/client.jpg" alt="client img"></li>
+                                <li><img src="img/servcis-icon/client.jpg" alt="client img"></li>
+                                <li><img src="img/servcis-icon/client.jpg" alt="client img"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="testimonial__client">
+                            <h2 data-subTitle="آراء العملاء" class="title">
+                                ماذا يقول عملاؤنا 
+                            </h2>
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+
+                                
+                                  <div class="swiper-slide">
+                                    <div class="item">
+                                       <p>
+                                            قريبا
+                                       </p>
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="item-info">
+                                                <h3>عبدالرحمن</h3>
+                                                <span>عميل</span>
+                                            </div>
+                                            <i class='bx bxs-quote-alt-right'></i>
+                                        </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="swiper-slide">
+                                    <div class="item">
+                                        <p>
+                                            قريبا
+                                       </p>
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="item-info">
+                                                <h3>عبدالرحمن</h3>
+                                                <span>عميل</span>
+                                            </div>
+                                            <i class='bx bxs-quote-alt-right'></i>
+                                        </div>
+                                    </div>
+                                  </div>
+
+
+                                </div><!-- ./swiper wrapper -->
+                                <div class="swiper-button-next btn-control"></div>
+                                <div class="swiper-button-prev btn-control"></div>
+                            </div><!-- ./slider -->
+
+                        </div>
+                    </div>
+                </div><!-- ./row -->
+            </div><!-- ./container -->
+        </section><!-- ./testimonal -->
+
+
+        <footer class="footer sec-padding" >
+            <div class="container">
+                <div class="row">
+
+                </div><!-- ./row -->
+            </div><!-- ./container -->
+        </footer><!-- ./footer -->
 
 
         <!-- js files -->
-        <script src="js/aos.js"></script> 
+         <!-- Swiper JS -->
+         <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+         <script src="js/aos.js"></script> 
         <script src="js/script.js"></script>
     </body>
 </html>

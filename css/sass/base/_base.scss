@@ -31,8 +31,10 @@ a {
     @include reSetting-a(16px,$mainHeaderColor);
 }
 
+
 p{ 
-    font-size: 14px;
+    font-size: 18px;
+    word-spacing: 1.5px;
     color: $textSiblingColor;
     text-transform: capitalize;
 }

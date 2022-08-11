@@ -37,11 +37,14 @@ let accordionHeader = document.querySelectorAll('.accordion-header');
 let accordionBody = document.querySelectorAll('.accordion-body');
 accordionHeader.forEach((item , ind) => {
     item.addEventListener('click',(e) => {
+        let icon = item.querySelector('i');
         accordionBody.forEach((dd) => {
             if(e.target.nextElementSibling !== dd && dd.classList.contains("actives")) {
                 dd.classList.remove("actives");
                 accordionHeader.forEach((acc) => {
                     acc.classList.remove("actives");
+                    let icon = acc.querySelector('i');
+                    icon.className = "bx bx-plus";
                 });
             }
         });
@@ -51,11 +54,18 @@ accordionHeader.forEach((item , ind) => {
         item.classList.toggle("actives");
 
         if(item.classList.contains('actives')){
-            let icon = item.querySelector('i');
             icon.className = "bx bx-minus";
         }else{
-            let icon = item.querySelector('i');
             icon.className = "bx bx-plus";
         }
     });
+});
+
+
+
+var swiper = new Swiper(".mySwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
 });

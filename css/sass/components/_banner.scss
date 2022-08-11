@@ -1,0 +1,34 @@
+
+
+
+.banner  {
+    width: 100%;
+    height: 400px;
+    @include bg-img('../../../img/bg-img/footer.d025f458.jpg',true);
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .4;
+        background-color: $mainTextColor;
+        background-image: linear-gradient( $bgColor 10px , $mainTextColor );
+        z-index: -1;
+    }
+
+
+    &__content {
+        text-align: center;
+        padding: 10px;
+        h2 {
+            color: $mainHeaderColor;
+        }
+        p {
+            margin: 20px 0px;
+        }
+    }
+}
