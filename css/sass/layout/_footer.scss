@@ -5,7 +5,7 @@
     height: 500px;
     position: relative;
     z-index: 1;
-    @include bg-img('../../../img/bg-img/footer.d025f458.jpg');
+    @include bg-img('../img/bg-img/footer.d025f458.jpg');
 
     &::after {
         content: "";
@@ -14,7 +14,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        @include bg-img('../../../img/bg-img/footer-wav.png');
+        @include bg-img('../img/bg-img/footer-wav.png');
         background-size: 100%;
         z-index: -1;
         background-position: 0 0;
