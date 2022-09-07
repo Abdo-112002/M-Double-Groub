@@ -60,18 +60,10 @@
 }
 
 .active {
-    color: $activeColor !important;
-    font-weight: bold;
-    position: relative;
-            &::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: -10px;
-                height: 0.75rem;
-                @include bg-img('../img/svg/line-1.svg');
-            }
+       &>a {
+        color: $activeColor !important;
+        font-weight: bold;
+       }
 }
 
 

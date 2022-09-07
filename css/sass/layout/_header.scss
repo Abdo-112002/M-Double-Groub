@@ -8,6 +8,11 @@
     z-index: 999;
     // padding: 10px 0px;
     transition: padding 300ms ease-in-out;
+
+    &.defaultActive {
+        background-color: $whiteColor;
+    }
+
     &__logo {
         width: 120px;
         cursor: pointer;
@@ -20,15 +25,16 @@
 
     &__navLinks {
         @extend .row;
+        flex-wrap: nowrap;
         column-gap: 30px;
-        transition: 300ms ease-in-out;
+        transition: height ,padding 300ms ease-in-out;
         @include devices(mobile) {
             flex-direction: column;
             position: fixed;
             top: 93px;
             left: 0;
             width: 100%;
-            background-color: $bgColor ;
+            background-color: $whiteColor ;
             column-gap: 0px;
             row-gap: 30px;
             overflow: hidden;
@@ -41,14 +47,16 @@
             }
         }
         &--item {
-            font-size: 18px;
-            width: fit-content;
-            color: $mainHeaderColor;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: color 200ms ease-in-out;
-            &:hover {
-                color: $activeColor;
+            a {
+                font-size: 18px;
+                width: fit-content;
+                color: $mainHeaderColor;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: color 200ms ease-in-out;
+                &:hover {
+                    color: $activeColor;
+                }
             }
 
         }

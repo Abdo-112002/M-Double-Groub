@@ -35,6 +35,9 @@
     }
     &__info {
         padding-left: 20px;
+        @include devices(tablet) {
+            margin-top: 100px;
+        }
         @include devices(mobile) {
             margin-top: 100px;
             text-align: center;
@@ -71,11 +74,14 @@
         @include loping_y(infinity-y-img);
         img {
             display: block;
-            max-width: 80%;
+            max-width: 75%;
             margin-right: auto;
-
             @include devices(tablet) {
-                margin: auto ;
+                display: none;
+            }
+            @include devices(mobile) {
+                margin: auto;
+                display: block
             }
         }
     }

@@ -16,12 +16,13 @@ document.addEventListener("click",(eo) => {
 });
 
 
+
 // header style when user scroll down
 let header = document.querySelector(".header");
 window.onscroll = function() {
     if(this.scrollY > 50){
         header.style.cssText = `
-                padding: 10px 0px; background: #F7F7FF;
+                padding: 10px 0px; background: #fff;
                 box-shadow: 0rem .5rem 1rem rgba(0,0,0,0.2);
         ` ;
         // document.querySelector(".scrollTop").style.right = "15px";
@@ -63,9 +64,12 @@ accordionHeader.forEach((item , ind) => {
 
 
 
+// slider
 var swiper = new Swiper(".mySwiper", {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
 });
+
+
